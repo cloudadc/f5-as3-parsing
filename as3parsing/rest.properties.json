@@ -1,0 +1,3329 @@
+{
+    "ltm/cipher/group": {
+        "allowCipherRules": {
+            "extend": "objArray",
+            "restname": "allow"
+        },
+        "excludeCipherRules": {
+            "extend": "objArray",
+            "restname": "exclude"
+        },
+        "order": {
+            "restname": "ordering"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "requireCipherRules": {
+            "extend": "objArray",
+            "restname": "require"
+        }
+    },
+    "ltm/cipher/group/allow": {
+        "name": {
+            "restname": "name"
+        },
+        "partition": {
+            "restname": "partition"
+        }
+    },
+    "ltm/cipher/group/exclude": {
+        "name": {
+            "restname": "name"
+        },
+        "partition": {
+            "restname": "partition"
+        }
+    },
+    "ltm/cipher/group/require": {
+        "name": {
+            "restname": "name"
+        },
+        "partition": {
+            "restname": "partition"
+        }
+    },
+    "ltm/cipher/rule": {
+        "cipher": {
+            "restname": "cipher"
+        },
+        "dh-groups": {
+            "minVersion": "14.0",
+            "restname": "dhGroups"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "signature-algorithms": {
+            "minVersion": "14.0",
+            "restname": "signatureAlgorithms"
+        }
+    },
+    "ltm/data-group": {
+        "external": {
+            "extend": "object",
+            "restname": "external"
+        },
+        "internal": {
+            "extend": "object",
+            "restname": "internal"
+        }
+    },
+    "ltm/data-group/external": {
+        "dataGroupFile": {
+            "restname": "externalFileName"
+        },
+        "externalFilePath": {
+            "quotedString": true,
+            "restname": "sourcePath"
+        },
+        "keyDataType": {
+            "restname": "type"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        }
+    },
+    "ltm/data-group/internal": {
+        "keyDataType": {
+            "restname": "type"
+        },
+        "records": {
+            "extend": "objArray",
+            "restname": "records"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        }
+    },
+    "ltm/data-group/internal/records": {
+        "name": {
+            "intToString": true,
+            "quotedString": true,
+            "restname": "name"
+        },
+        "value": {
+            "quotedString": true,
+            "restname": "data"
+        }
+    },
+    "ltm/dns/cache/transparent": {
+        "answer-default-zones": {
+            "falsehood": "no",
+            "restname": "answerDefaultZones",
+            "truth": "yes"
+        },
+        "local-zones": {
+            "extend": "namedObject",
+            "restname": "localZones"
+        },
+        "messageCacheSize": {
+            "restname": "msgCacheSize"
+        },
+        "recordCacheSize": {
+            "restname": "rrsetCacheSize"
+        },
+        "recordRotationMethod": {
+            "restname": "rrsetRotate"
+        },
+        "remark": {
+            "minVersion": "14.0",
+            "quotedString": true,
+            "restname": "description"
+        }
+    },
+    "ltm/dns/cache/transparent/local-zones": {
+        "name": {
+            "restname": "name"
+        },
+        "records": {
+            "extend": "array",
+            "quotedString": true,
+            "restname": "records"
+        },
+        "type": {
+            "restname": "type"
+        }
+    },
+    "ltm/dns/nameserver": {
+        "address": {
+            "restname": "address"
+        },
+        "port": {
+            "restname": "port"
+        },
+        "route-domain": {
+            "restname": "routeDomain"
+        },
+        "tsig-key": {
+            "restname": "tsigKey"
+        }
+    },
+    "ltm/dns/tsig-key": {
+        "algorithm": {
+            "restname": "algorithm"
+        },
+        "secret": {
+            "quotedString": true,
+            "restname": "secret"
+        }
+    },
+    "ltm/dns/zone": {
+        "dns-express-allow-notify": {
+            "extend": "array",
+            "restname": "dnsExpressAllowNotify"
+        },
+        "dns-express-enabled": {
+            "falsehood": "no",
+            "restname": "dnsExpressEnabled",
+            "truth": "yes"
+        },
+        "dns-express-notify-action": {
+            "restname": "dnsExpressNotifyAction"
+        },
+        "dns-express-notify-tsig-verify": {
+            "falsehood": "no",
+            "restname": "dnsExpressNotifyTsigVerify",
+            "truth": "yes"
+        },
+        "dns-express-server": {
+            "restname": "dnsExpressServer"
+        },
+        "responsePolicyEnabled": {
+            "falsehood": "no",
+            "restname": "responsePolicy",
+            "truth": "yes"
+        },
+        "server-tsig-key": {
+            "restname": "serverTsigKey"
+        },
+        "transfer-clients": {
+            "extend": "array",
+            "restname": "transferClients"
+        }
+    },
+    "ltm/html-rule/comment-raise-event": {
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        }
+    },
+    "ltm/html-rule/comment-remove": {
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        }
+    },
+    "ltm/html-rule/tag-append-html": {
+        "content": {
+            "extend": "object",
+            "restname": "action"
+        },
+        "match": {
+            "extend": "object",
+            "restname": "match"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        }
+    },
+    "ltm/html-rule/tag-append-html/action": {
+        "text": {
+            "quotedString": true,
+            "restname": "text"
+        }
+    },
+    "ltm/html-rule/tag-append-html/match": {
+        "attribute-name": {
+            "quotedString": true,
+            "restname": "attributeName"
+        },
+        "attribute-value": {
+            "quotedString": true,
+            "restname": "attributeValue"
+        },
+        "tag-name": {
+            "quotedString": true,
+            "restname": "tagName"
+        }
+    },
+    "ltm/html-rule/tag-prepend-html": {
+        "content": {
+            "extend": "object",
+            "restname": "action"
+        },
+        "match": {
+            "extend": "object",
+            "restname": "match"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        }
+    },
+    "ltm/html-rule/tag-prepend-html/action": {
+        "text": {
+            "quotedString": true,
+            "restname": "text"
+        }
+    },
+    "ltm/html-rule/tag-prepend-html/match": {
+        "attribute-name": {
+            "quotedString": true,
+            "restname": "attributeName"
+        },
+        "attribute-value": {
+            "quotedString": true,
+            "restname": "attributeValue"
+        },
+        "tag-name": {
+            "quotedString": true,
+            "restname": "tagName"
+        }
+    },
+    "ltm/html-rule/tag-raise-event": {
+        "match": {
+            "extend": "object",
+            "restname": "match"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        }
+    },
+    "ltm/html-rule/tag-raise-event/match": {
+        "attribute-name": {
+            "quotedString": true,
+            "restname": "attributeName"
+        },
+        "attribute-value": {
+            "quotedString": true,
+            "restname": "attributeValue"
+        },
+        "tag-name": {
+            "quotedString": true,
+            "restname": "tagName"
+        }
+    },
+    "ltm/html-rule/tag-remove": {
+        "match": {
+            "extend": "object",
+            "restname": "match"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        }
+    },
+    "ltm/html-rule/tag-remove-attribute": {
+        "attributeName": {
+            "extend": "object",
+            "restname": "action"
+        },
+        "match": {
+            "extend": "object",
+            "restname": "match"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        }
+    },
+    "ltm/html-rule/tag-remove-attribute/action": {
+        "attribute-name": {
+            "quotedString": true,
+            "restname": "attributeName"
+        }
+    },
+    "ltm/html-rule/tag-remove-attribute/match": {
+        "attribute-name": {
+            "quotedString": true,
+            "restname": "attributeName"
+        },
+        "attribute-value": {
+            "quotedString": true,
+            "restname": "attributeValue"
+        },
+        "tag-name": {
+            "quotedString": true,
+            "restname": "tagName"
+        }
+    },
+    "ltm/html-rule/tag-remove/match": {
+        "attribute-name": {
+            "quotedString": true,
+            "restname": "attributeName"
+        },
+        "attribute-value": {
+            "quotedString": true,
+            "restname": "attributeValue"
+        },
+        "tag-name": {
+            "quotedString": true,
+            "restname": "tagName"
+        }
+    },
+    "ltm/ifile": {
+        "file-name": {
+            "restname": "fileName"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        }
+    },
+    "ltm/monitor": {
+        "acceptRCODE": {
+            "restname": "acceptRcode"
+        },
+        "adaptive": {
+            "falsehood": "disabled",
+            "restname": "adaptive",
+            "truth": "enabled"
+        },
+        "adaptive-divergence-type": {
+            "restname": "adaptiveDivergenceType"
+        },
+        "adaptiveDivergencePercentage": {
+            "restname": "adaptiveDivergenceValue"
+        },
+        "adaptiveLimitMilliseconds": {
+            "restname": "adaptiveLimit"
+        },
+        "adaptiveWindow": {
+            "restname": "adaptiveSamplingTimespan"
+        },
+        "answer-contains": {
+            "restname": "answerContains"
+        },
+        "arguments": {
+            "restname": "args"
+        },
+        "base": {
+            "quotedString": true,
+            "restname": "base"
+        },
+        "chase-referrals": {
+            "falsehood": "no",
+            "restname": "chaseReferrals",
+            "truth": "yes"
+        },
+        "ciphers": {
+            "restname": "cipherlist"
+        },
+        "clientCertificate": {
+            "restname": "cert"
+        },
+        "clientTLS": {
+            "restname": "sslProfile"
+        },
+        "codesDown": {
+            "quotedString": true,
+            "restname": "filterNeg"
+        },
+        "codesUp": {
+            "quotedString": true,
+            "restname": "filter"
+        },
+        "count": {
+            "restname": "count"
+        },
+        "database": {
+            "restname": "database"
+        },
+        "destination": {
+            "restname": "destination"
+        },
+        "domain": {
+            "restname": "domain"
+        },
+        "dscp": {
+            "restname": "ipDscp"
+        },
+        "environmentVariables": {
+            "restname": "userDefined"
+        },
+        "filename": {
+            "restname": "filename"
+        },
+        "filter": {
+            "quotedString": true,
+            "restname": "filterLdap"
+        },
+        "headers": {
+            "quotedString": true,
+            "restname": "headers"
+        },
+        "iControl_post": {
+            "extend": "object",
+            "restname": "iControl_post"
+        },
+        "interval": {
+            "restname": "interval"
+        },
+        "key": {
+            "restname": "key"
+        },
+        "mandatory-attributes": {
+            "falsehood": "no",
+            "restname": "mandatoryAttributes",
+            "truth": "yes"
+        },
+        "nas-ip-address": {
+            "restname": "nasIpAddress"
+        },
+        "passphrase": {
+            "quotedString": true,
+            "restname": "password"
+        },
+        "pathname": {
+            "restname": "run"
+        },
+        "protocol": {
+            "restname": "mode"
+        },
+        "queryName": {
+            "quotedString": true,
+            "restname": "qname"
+        },
+        "queryType": {
+            "restname": "qtype"
+        },
+        "receive": {
+            "quotedString": true,
+            "restname": "recv"
+        },
+        "receiveColumn": {
+            "restname": "recvColumn"
+        },
+        "receiveDown": {
+            "quotedString": true,
+            "restname": "recvDisable"
+        },
+        "receiveRow": {
+            "restname": "recvRow"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "request": {
+            "quotedString": true,
+            "restname": "request"
+        },
+        "reverse": {
+            "falsehood": "disabled",
+            "restname": "reverse",
+            "truth": "enabled"
+        },
+        "secret": {
+            "quotedString": true,
+            "restname": "secret"
+        },
+        "security": {
+            "restname": "security"
+        },
+        "send": {
+            "quotedString": true,
+            "restname": "send"
+        },
+        "time-until-up": {
+            "restname": "timeUntilUp"
+        },
+        "timeout": {
+            "restname": "timeout"
+        },
+        "transparent": {
+            "falsehood": "disabled",
+            "restname": "transparent",
+            "truth": "enabled"
+        },
+        "up-interval": {
+            "restname": "upInterval"
+        },
+        "username": {
+            "restname": "username"
+        }
+    },
+    "ltm/node": {
+        "address": {
+            "restname": "address"
+        },
+        "fqdn": {
+            "extend": "object",
+            "restname": "fqdn"
+        },
+        "metadata": {
+            "extend": "objArray",
+            "restname": "metadata"
+        },
+        "references": {
+            "restname": "references"
+        }
+    },
+    "ltm/node/fqdn": {
+        "address-family": {
+            "restname": "addressFamily"
+        },
+        "autoPopulate": {
+            "falsehood": "disabled",
+            "restname": "autopopulate",
+            "truth": "enabled"
+        },
+        "down-interval": {
+            "restname": "downInterval"
+        },
+        "hostname": {
+            "restname": "tmName"
+        },
+        "queryInterval": {
+            "restname": "interval"
+        }
+    },
+    "ltm/node/metadata": {
+        "name": {
+            "restname": "name"
+        },
+        "value": {
+            "restname": "value"
+        }
+    },
+    "ltm/persistence": {
+        "addressMask": {
+            "restname": "mask"
+        },
+        "alwaysSet": {
+            "falsehood": "disabled",
+            "restname": "alwaysSend",
+            "truth": "enabled"
+        },
+        "bufferLimit": {
+            "restname": "hashBufferLimit"
+        },
+        "cookie-name": {
+            "quotedString": true,
+            "restname": "cookieName"
+        },
+        "cookieMethod": {
+            "restname": "method"
+        },
+        "count": {
+            "restname": "hashLength"
+        },
+        "duration": {
+            "restname": "timeout"
+        },
+        "encrypt": {
+            "falsehood": "disabled",
+            "restname": "cookieEncryption",
+            "truth": "required"
+        },
+        "endPattern": {
+            "quotedString": true,
+            "restname": "hashEndPattern"
+        },
+        "hash-algorithm": {
+            "restname": "hashAlgorithm"
+        },
+        "header": {
+            "restname": "sipInfo"
+        },
+        "httpOnly": {
+            "falsehood": "disabled",
+            "restname": "httponly",
+            "truth": "enabled"
+        },
+        "iRule": {
+            "restname": "rule"
+        },
+        "match-across-pools": {
+            "falsehood": "disabled",
+            "restname": "matchAcrossPools",
+            "truth": "enabled"
+        },
+        "matchAcrossPools": {
+            "falsehood": "disabled",
+            "restname": "matchAcrossPools",
+            "truth": "enabled"
+        },
+        "matchAcrossVirtualAddresses": {
+            "falsehood": "disabled",
+            "restname": "matchAcrossVirtuals",
+            "truth": "enabled"
+        },
+        "matchAcrossVirtualPorts": {
+            "falsehood": "disabled",
+            "restname": "matchAcrossServices",
+            "truth": "enabled"
+        },
+        "mirror": {
+            "falsehood": "disabled",
+            "restname": "mirror",
+            "truth": "enabled"
+        },
+        "override-connection-limit": {
+            "falsehood": "disabled",
+            "restname": "overrideConnectionLimit",
+            "truth": "enabled"
+        },
+        "overrideConnectionLimit": {
+            "falsehood": "disabled",
+            "restname": "overrideConnectionLimit",
+            "truth": "enabled"
+        },
+        "passphrase": {
+            "quotedString": true,
+            "restname": "cookieEncryptionPassphrase"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "secure": {
+            "falsehood": "disabled",
+            "restname": "secure",
+            "truth": "enabled"
+        },
+        "sessionBroker": {
+            "falsehood": "no",
+            "restname": "hasSessionDir",
+            "truth": "yes"
+        },
+        "startAt": {
+            "restname": "hashOffset"
+        },
+        "startPattern": {
+            "quotedString": true,
+            "restname": "hashStartPattern"
+        },
+        "ttl": {
+            "restname": "expiration"
+        }
+    },
+    "ltm/policy": {
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "rules": {
+            "extend": "objArray",
+            "restname": "rules"
+        },
+        "strategy": {
+            "restname": "strategy"
+        }
+    },
+    "ltm/policy-strategy": {
+        "matchMethod": {
+            "restname": "strategy"
+        },
+        "operands": {
+            "extend": "objArray",
+            "restname": "operands"
+        }
+    },
+    "ltm/policy-strategy/operands": {
+        "policyString": {
+            "restname": "policyString"
+        }
+    },
+    "ltm/policy/rules": {
+        "actions": {
+            "extend": "objArray",
+            "restname": "actions"
+        },
+        "conditions": {
+            "extend": "objArray",
+            "restname": "conditions"
+        },
+        "name": {
+            "restname": "name"
+        },
+        "ordinal": {
+            "restname": "ordinal"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        }
+    },
+    "ltm/policy/rules/actions": {
+        "policyString": {
+            "restname": "policyString"
+        }
+    },
+    "ltm/policy/rules/conditions": {
+        "policyString": {
+            "restname": "policyString"
+        }
+    },
+    "ltm/pool": {
+        "allowNATEnabled": {
+            "falsehood": "no",
+            "restname": "allowNat",
+            "truth": "yes"
+        },
+        "allowSNATEnabled": {
+            "falsehood": "no",
+            "restname": "allowSnat",
+            "truth": "yes"
+        },
+        "load-balancing-mode": {
+            "restname": "loadBalancingMode"
+        },
+        "members": {
+            "default": null,
+            "extend": "objArray",
+            "restname": "members"
+        },
+        "minimumMembersActive": {
+            "restname": "minActiveMembers"
+        },
+        "minimumMonitors": {
+            "restname": "minimumMonitors"
+        },
+        "monitors": {
+            "restname": "monitor"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "reselect-tries": {
+            "restname": "reselectTries"
+        },
+        "service-down-action": {
+            "restname": "serviceDownAction"
+        },
+        "slow-ramp-time": {
+            "restname": "slowRampTime"
+        }
+    },
+    "ltm/pool/members": {
+        "connection-limit": {
+            "restname": "connectionLimit"
+        },
+        "dynamic-ratio": {
+            "restname": "dynamicRatio"
+        },
+        "fqdn": {
+            "extend": "object",
+            "restname": "fqdn"
+        },
+        "fullPath": {
+            "restname": "name"
+        },
+        "metadata": {
+            "extend": "objArray",
+            "restname": "metadata"
+        },
+        "minimumMonitors": {
+            "restname": "minimumMonitors"
+        },
+        "monitors": {
+            "restname": "monitor"
+        },
+        "priority-group": {
+            "restname": "priorityGroup"
+        },
+        "rate-limit": {
+            "falsehood": "disabled",
+            "restname": "rateLimit"
+        },
+        "ratio": {
+            "restname": "ratio"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "session": {
+            "restname": "session"
+        },
+        "state": {
+            "restname": "state"
+        }
+    },
+    "ltm/pool/members/fqdn": {
+        "autopopulate": {
+            "falsehood": "disabled",
+            "restname": "autopopulate",
+            "truth": "enabled"
+        }
+    },
+    "ltm/pool/members/metadata": {
+        "name": {
+            "restname": "name"
+        },
+        "value": {
+            "restname": "value"
+        }
+    },
+    "ltm/profile": {
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        }
+    },
+    "ltm/profile/analytics": {
+        "captureFilter": {
+            "extend": "object",
+            "restname": "trafficCapture"
+        },
+        "captured-traffic-external-logging": {
+            "falsehood": "disabled",
+            "restname": "capturedTrafficExternalLogging",
+            "truth": "enabled"
+        },
+        "captured-traffic-internal-logging": {
+            "falsehood": "disabled",
+            "restname": "capturedTrafficInternalLogging",
+            "truth": "enabled"
+        },
+        "collect-geo": {
+            "falsehood": "disabled",
+            "restname": "collectGeo",
+            "truth": "enabled"
+        },
+        "collect-ip": {
+            "falsehood": "disabled",
+            "restname": "collectIp",
+            "truth": "enabled"
+        },
+        "collect-max-tps-and-throughput": {
+            "falsehood": "disabled",
+            "restname": "collectMaxTpsAndThroughput",
+            "truth": "enabled"
+        },
+        "collect-os-and-browser": {
+            "falsehood": "disabled",
+            "restname": "collectOsAndBrowser",
+            "truth": "enabled"
+        },
+        "collect-page-load-time": {
+            "falsehood": "disabled",
+            "restname": "collectPageLoadTime",
+            "truth": "enabled"
+        },
+        "collect-url": {
+            "falsehood": "disabled",
+            "restname": "collectUrl",
+            "truth": "enabled"
+        },
+        "collect-user-agent": {
+            "falsehood": "disabled",
+            "restname": "collectUserAgent",
+            "truth": "enabled"
+        },
+        "collectClientSideStatistics": {
+            "falsehood": "disabled",
+            "restname": "collectHttpTimingMetrics",
+            "truth": "enabled"
+        },
+        "collectMethod": {
+            "falsehood": "disabled",
+            "restname": "collectMethods",
+            "truth": "enabled"
+        },
+        "collectResponseCode": {
+            "falsehood": "disabled",
+            "restname": "collectResponseCodes",
+            "truth": "enabled"
+        },
+        "collectSubnet": {
+            "falsehood": "disabled",
+            "restname": "collectSubnets",
+            "truth": "enabled"
+        },
+        "collectUserSession": {
+            "falsehood": "disabled",
+            "restname": "collectUserSessions",
+            "truth": "enabled"
+        },
+        "collected-stats-external-logging": {
+            "falsehood": "disabled",
+            "restname": "collectedStatsExternalLogging",
+            "truth": "enabled"
+        },
+        "collected-stats-internal-logging": {
+            "falsehood": "disabled",
+            "restname": "collectedStatsInternalLogging",
+            "truth": "enabled"
+        },
+        "countries-for-stat-collection": {
+            "extend": "array",
+            "minVersion": "13.1.1",
+            "restname": "countriesForStatCollection"
+        },
+        "external-logging-publisher": {
+            "default": "none",
+            "restname": "externalLoggingPublisher"
+        },
+        "notification-by-email": {
+            "falsehood": "disabled",
+            "restname": "notificationByEmail",
+            "truth": "enabled"
+        },
+        "notification-by-snmp": {
+            "falsehood": "disabled",
+            "restname": "notificationBySnmp",
+            "truth": "enabled"
+        },
+        "notification-by-syslog": {
+            "falsehood": "disabled",
+            "restname": "notificationBySyslog",
+            "truth": "enabled"
+        },
+        "notification-email-addresses": {
+            "extend": "array",
+            "restname": "notificationEmailAddresses"
+        },
+        "publish-irule-statistics": {
+            "falsehood": "disabled",
+            "restname": "publishIruleStatistics",
+            "truth": "enabled"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "session-cookie-security": {
+            "falsehood": "disabled",
+            "restname": "sessionCookieSecurity",
+            "truth": "enabled"
+        },
+        "session-timeout-minutes": {
+            "intToString": true,
+            "restname": "sessionTimeoutMinutes"
+        },
+        "subnets-for-stat-collection": {
+            "extend": "array",
+            "minVersion": "13.1.1",
+            "restname": "subnetsForStatCollection"
+        },
+        "urls-for-stat-collection": {
+            "extend": "array",
+            "minVersion": "13.1.1",
+            "restname": "urlsForStatCollection"
+        }
+    },
+    "ltm/profile/analytics/traffic-capture": {
+        "capture-for-f5-appsvcs": {
+            "extend": "object",
+            "restname": "captureForF5Appsvcs"
+        }
+    },
+    "ltm/profile/analytics/traffic-capture/capture-for-f5-appsvcs": {
+        "captured-protocols": {
+            "restname": "capturedProtocols"
+        },
+        "captured-ready-for-js-injection": {
+            "restname": "capturedReadyForJsInjection"
+        },
+        "client-ips": {
+            "extend": "array",
+            "restname": "clientIps"
+        },
+        "dos-activity": {
+            "restname": "dosActivity"
+        },
+        "methods": {
+            "extend": "array",
+            "restname": "methods"
+        },
+        "node-addresses": {
+            "extend": "array",
+            "restname": "nodeAddresses"
+        },
+        "request-captured-parts": {
+            "restname": "requestCapturedParts"
+        },
+        "request-content-filter-search-part": {
+            "restname": "requestContentFilterSearchPart"
+        },
+        "request-content-filter-search-string": {
+            "default": "none",
+            "quotedString": true,
+            "restname": "requestContentFilterSearchString"
+        },
+        "response-captured-parts": {
+            "restname": "responseCapturedParts"
+        },
+        "response-codes": {
+            "extend": "array",
+            "restname": "responseCodes"
+        },
+        "response-content-filter-search-part": {
+            "restname": "responseContentFilterSearchPart"
+        },
+        "response-content-filter-search-string": {
+            "default": "none",
+            "quotedString": true,
+            "restname": "responseContentFilterSearchString"
+        },
+        "url-filter-type": {
+            "minVersion": "14.0",
+            "restname": "urlFilterType"
+        },
+        "url-path-prefixes": {
+            "extend": "array",
+            "restname": "urlPathPrefixes"
+        },
+        "user-agent-substrings": {
+            "extend": "array",
+            "restname": "userAgentSubstrings"
+        },
+        "virtual-servers": {
+            "extend": "array",
+            "restname": "virtualServers"
+        }
+    },
+    "ltm/profile/classification": {
+        "appDetectionEnabled": {
+            "falsehood": "off",
+            "restname": "appDetection",
+            "truth": "on"
+        },
+        "iRuleEventEnabled": {
+            "falsehood": "off",
+            "restname": "iruleEvent",
+            "truth": "on"
+        },
+        "log-publisher": {
+            "default": "none",
+            "restname": "logPublisher"
+        },
+        "log-unclassified-domain": {
+            "falsehood": "off",
+            "restname": "logUnclassifiedDomain",
+            "truth": "on"
+        },
+        "parentProfile": {
+            "restname": "defaultsFrom"
+        },
+        "preset": {
+            "restname": "preset"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "statisticsCollectionEnabled": {
+            "falsehood": "off",
+            "restname": "avrStatCollect",
+            "truth": "on"
+        },
+        "statisticsPublisher": {
+            "default": "none",
+            "restname": "avrPublisher"
+        },
+        "urlCategorizationEnabled": {
+            "falsehood": "off",
+            "restname": "urlcat",
+            "truth": "on"
+        }
+    },
+    "ltm/profile/client-ldap": {
+        "activation-mode": {
+            "restname": "activationMode"
+        }
+    },
+    "ltm/profile/client-ssl": {
+        "alert-timeout": {
+            "intToString": true,
+            "restname": "alertTimeout"
+        },
+        "allowExpiredCRL": {
+            "falsehood": "disabled",
+            "restname": "allowExpiredCrl",
+            "truth": "enabled"
+        },
+        "authenticationFrequency": {
+            "restname": "authenticate"
+        },
+        "authenticationInviteCA": {
+            "restname": "clientCertCa"
+        },
+        "authenticationMode": {
+            "restname": "peerCertMode"
+        },
+        "authenticationTrustCA": {
+            "restname": "caFile"
+        },
+        "c3dEnabled": {
+            "falsehood": "disabled",
+            "restname": "sslC3d",
+            "truth": "enabled"
+        },
+        "c3dOCSP": {
+            "restname": "c3dOcsp"
+        },
+        "c3dOCSPUnknownStatusAction": {
+            "restname": "c3dDropUnknownOcspStatus"
+        },
+        "cache-timeout": {
+            "restname": "cacheTimeout"
+        },
+        "cacheCertificateEnabled": {
+            "falsehood": "disabled",
+            "restname": "certLookupByIpaddrPort",
+            "truth": "enabled"
+        },
+        "certificates": {
+            "extend": "objArray",
+            "restname": "certKeyChain"
+        },
+        "cipher-group": {
+            "restname": "cipherGroup"
+        },
+        "ciphers": {
+            "restname": "ciphers"
+        },
+        "crlFile": {
+            "restname": "crlFile"
+        },
+        "enabled": {
+            "falsehood": "disabled",
+            "restname": "mode",
+            "truth": "enabled"
+        },
+        "forwardProxyBypassAllowlist": {
+            "restname": "hostnameWhitelist"
+        },
+        "forwardProxyBypassEnabled": {
+            "falsehood": "disabled",
+            "restname": "sslForwardProxyBypass",
+            "truth": "enabled"
+        },
+        "forwardProxyEnabled": {
+            "falsehood": "disabled",
+            "restname": "sslForwardProxy",
+            "truth": "enabled"
+        },
+        "matchToSNI": {
+            "restname": "serverName"
+        },
+        "options": {
+            "extend": "array",
+            "restname": "options"
+        },
+        "proxy-ca-cert": {
+            "restname": "proxyCaCert"
+        },
+        "proxy-ca-key": {
+            "restname": "proxyCaKey"
+        },
+        "proxy-ca-passphrase": {
+            "quotedString": true,
+            "restname": "proxyCaPassphrase"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "renegotiationEnabled": {
+            "falsehood": "disabled",
+            "restname": "renegotiation",
+            "truth": "enabled"
+        },
+        "requireSNI": {
+            "falsehood": "false",
+            "restname": "sniRequire",
+            "truth": "true"
+        },
+        "retainCertificateEnabled": {
+            "falsehood": "false",
+            "restname": "retainCertificate",
+            "truth": "true"
+        },
+        "sni-default": {
+            "falsehood": "false",
+            "restname": "sniDefault",
+            "truth": "true"
+        },
+        "staplerOCSPEnabled": {
+            "falsehood": "disabled",
+            "restname": "ocspStapling",
+            "truth": "enabled"
+        }
+    },
+    "ltm/profile/client-ssl/cert-key-chain": {
+        "certificate": {
+            "restname": "cert"
+        },
+        "chain": {
+            "restname": "chain"
+        },
+        "key": {
+            "restname": "key"
+        },
+        "passphrase": {
+            "quotedString": true,
+            "restname": "passphrase"
+        },
+        "usage": {
+            "restname": "usage"
+        }
+    },
+    "ltm/profile/dns": {
+        "cache": {
+            "restname": "cache"
+        },
+        "cacheEnabled": {
+            "falsehood": "no",
+            "restname": "enableCache",
+            "truth": "yes"
+        },
+        "dns64-additional-section-rewrite": {
+            "restname": "dns64AdditionalSectionRewrite"
+        },
+        "dns64-prefix": {
+            "restname": "dns64Prefix"
+        },
+        "dns64Mode": {
+            "restname": "dns64"
+        },
+        "dnsExpressEnabled": {
+            "falsehood": "no",
+            "restname": "enableDnsExpress",
+            "truth": "yes"
+        },
+        "dnssecEnabled": {
+            "falsehood": "no",
+            "restname": "enableDnssec",
+            "truth": "yes"
+        },
+        "globalServerLoadBalancingEnabled": {
+            "falsehood": "no",
+            "restname": "enableGtm",
+            "truth": "yes"
+        },
+        "hardwareQueryValidationEnabled": {
+            "falsehood": "no",
+            "restname": "enableHardwareQueryValidation",
+            "truth": "yes"
+        },
+        "hardwareResponseCacheEnabled": {
+            "falsehood": "no",
+            "restname": "enableHardwareResponseCache",
+            "truth": "yes"
+        },
+        "localBindServerEnabled": {
+            "falsehood": "no",
+            "restname": "useLocalBind",
+            "truth": "yes"
+        },
+        "loggingEnabled": {
+            "falsehood": "no",
+            "restname": "enableLogging",
+            "truth": "yes"
+        },
+        "loggingProfile": {
+            "default": "none",
+            "restname": "logProfile"
+        },
+        "parentProfile": {
+            "restname": "defaultsFrom"
+        },
+        "rapid-response-last-action": {
+            "restname": "rapidResponseLastAction"
+        },
+        "rapidResponseEnabled": {
+            "falsehood": "no",
+            "restname": "enableRapidResponse",
+            "truth": "yes"
+        },
+        "recursionDesiredEnabled": {
+            "falsehood": "no",
+            "restname": "processRd",
+            "truth": "yes"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "securityEnabled": {
+            "falsehood": "no",
+            "restname": "enableDnsFirewall",
+            "truth": "yes"
+        },
+        "securityProfile": {
+            "restname": "dnsSecurity"
+        },
+        "statisticsSampleRate": {
+            "restname": "avrDnsstatSampleRate"
+        },
+        "unhandled-query-action": {
+            "restname": "unhandledQueryAction"
+        },
+        "zoneTransferEnabled": {
+            "falsehood": "no",
+            "restname": "processXfr",
+            "truth": "yes"
+        }
+    },
+    "ltm/profile/fastl4": {
+        "client-timeout": {
+            "restname": "clientTimeout"
+        },
+        "clientTimeout": {
+            "restname": "clientTimeout"
+        },
+        "idle-timeout": {
+            "intToString": true,
+            "restname": "idleTimeout"
+        },
+        "idleTimeout": {
+            "intToString": true,
+            "restname": "idleTimeout"
+        },
+        "keep-alive-interval": {
+            "restname": "keepAliveInterval"
+        },
+        "keepAliveInterval": {
+            "restname": "keepAliveInterval"
+        },
+        "loose-close": {
+            "falsehood": "disabled",
+            "restname": "looseClose",
+            "truth": "enabled"
+        },
+        "looseClose": {
+            "falsehood": "disabled",
+            "restname": "looseClose",
+            "truth": "enabled"
+        },
+        "loose-initialization": {
+            "falsehood": "disabled",
+            "restname": "looseInitialization",
+            "truth": "enabled"
+        },
+        "looseInitialization": {
+            "falsehood": "disabled",
+            "restname": "looseInitialization",
+            "truth": "enabled"
+        },
+        "maxSegmentSize": {
+            "restname": "mssOverride"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "reset-on-timeout": {
+            "falsehood": "disabled",
+            "restname": "resetOnTimeout",
+            "truth": "enabled"
+        },
+        "resetOnTimeout": {
+            "falsehood": "disabled",
+            "restname": "resetOnTimeout",
+            "truth": "enabled"
+        },
+        "syn-cookie-enable": {
+            "falsehood": "disabled",
+            "restname": "synCookieEnable",
+            "truth": "enabled"
+        },
+        "synCookieEnable": {
+            "falsehood": "disabled",
+            "restname": "synCookieEnable",
+            "truth": "enabled"
+        },
+        "synCookieAllowlist": {
+            "falsehood": "disabled",
+            "restname": "synCookieWhitelist",
+            "truth": "enabled"
+        },
+        "tcp-close-timeout": {
+            "intToString": true,
+            "restname": "tcpCloseTimeout"
+        },
+        "tcpCloseTimeout": {
+            "intToString": true,
+            "restname": "tcpCloseTimeout"
+        },
+        "tcp-handshake-timeout": {
+            "intToString": true,
+            "restname": "tcpHandshakeTimeout"
+        },
+        "tcpHandshakeTimeout": {
+            "intToString": true,
+            "restname": "tcpHandshakeTimeout"
+        }
+    },
+    "ltm/profile/fix": {
+        "error-action": {
+            "restname": "errorAction"
+        },
+        "fullLogonParsingEnabled": {
+            "restname": "fullLogonParsing"
+        },
+        "message-log-publisher": {
+            "restname": "messageLogPublisher"
+        },
+        "parentProfile": {
+            "restname": "defaultsFrom"
+        },
+        "quickParsingEnabled": {
+            "restname": "quickParsing"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "report-log-publisher": {
+            "restname": "reportLogPublisher"
+        },
+        "responseParsingEnabled": {
+            "restname": "responseParsing"
+        },
+        "senderTagMappingList": {
+            "extend": "objArray",
+            "restname": "senderTagClass"
+        },
+        "statistics-sample-interval": {
+            "restname": "statisticsSampleInterval"
+        }
+    },
+    "ltm/profile/fix/sender-tag-class": {
+        "sender-id": {
+            "restname": "senderId"
+        },
+        "tagDataGroup": {
+            "restname": "tagMapClass"
+        }
+    },
+    "ltm/profile/ftp": {
+        "activeModeEnabled": {
+            "falsehood": "disabled",
+            "minVersion": "14.0",
+            "restname": "allowActiveMode",
+            "truth": "enabled"
+        },
+        "allow-ftps": {
+            "falsehood": "disabled",
+            "restname": "allowFtps",
+            "truth": "enabled"
+        },
+        "enforceTlsSessionReuseEnabled": {
+            "falsehood": "disabled",
+            "minVersion": "14.0",
+            "restname": "enforceTlsSessionReuse",
+            "truth": "enabled"
+        },
+        "ftps-mode": {
+            "minVersion": "14.0",
+            "restname": "ftpsMode"
+        },
+        "inheritParentProfileEnabled": {
+            "falsehood": "disabled",
+            "restname": "inheritParentProfile",
+            "truth": "enabled"
+        },
+        "port": {
+            "restname": "port"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "securityEnabled": {
+            "falsehood": "disabled",
+            "restname": "security",
+            "truth": "enabled"
+        },
+        "translateExtendedEnabled": {
+            "falsehood": "disabled",
+            "restname": "translateExtended",
+            "truth": "enabled"
+        }
+    },
+    "ltm/profile/html": {
+        "content-selection": {
+            "extend": "array",
+            "restname": "contentSelection"
+        },
+        "contentDetectionEnabled": {
+            "falsehood": "disabled",
+            "restname": "contentDetection",
+            "truth": "enabled"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "rules": {
+            "extend": "array",
+            "restname": "rules"
+        }
+    },
+    "ltm/profile/http": {
+        "allowedResponseHeaders": {
+            "extend": "array",
+            "restname": "responseHeadersPermitted"
+        },
+        "cookiePassphrase": {
+            "quotedString": true,
+            "restname": "encryptCookieSecret"
+        },
+        "encrypt-cookies": {
+            "extend": "array",
+            "restname": "encryptCookies"
+        },
+        "enforcement": {
+            "extend": "object",
+            "restname": "enforcement"
+        },
+        "explicit-proxy": {
+            "extend": "object",
+            "restname": "explicitProxy"
+        },
+        "fallback-status-codes": {
+            "extend": "array",
+            "restname": "fallbackStatusCodes"
+        },
+        "fallbackRedirect": {
+            "restname": "fallbackHost"
+        },
+        "hsts": {
+            "extend": "object",
+            "restname": "hsts"
+        },
+        "insertHeader": {
+            "quotedString": true,
+            "restname": "headerInsert"
+        },
+        "multiplexTransformations": {
+            "falsehood": "disabled",
+            "restname": "oneconnectTransformations",
+            "truth": "enabled"
+        },
+        "otherXFF": {
+            "extend": "array",
+            "restname": "xffAlternativeNames"
+        },
+        "proxy-type": {
+            "restname": "proxyType"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "request-chunking": {
+            "restname": "requestChunking"
+        },
+        "response-chunking": {
+            "restname": "responseChunking"
+        },
+        "rewriteRedirects": {
+            "restname": "redirectRewrite"
+        },
+        "serverHeaderValue": {
+            "quotedString": true,
+            "restname": "serverAgentName"
+        },
+        "trustXFF": {
+            "falsehood": "disabled",
+            "restname": "acceptXff",
+            "truth": "enabled"
+        },
+        "via-request": {
+            "restname": "viaRequest"
+        },
+        "via-response": {
+            "restname": "viaResponse"
+        },
+        "viaHost": {
+            "restname": "viaHostName"
+        },
+        "whiteOutHeader": {
+            "quotedString": true,
+            "restname": "headerErase"
+        },
+        "xForwardedFor": {
+            "falsehood": "disabled",
+            "restname": "insertXforwardedFor",
+            "truth": "enabled"
+        }
+    },
+    "ltm/profile/http-compression": {
+        "allowHTTP10": {
+            "falsehood": "disabled",
+            "restname": "allowHttp10",
+            "truth": "enabled"
+        },
+        "buffer-size": {
+            "restname": "bufferSize"
+        },
+        "content-type-exclude": {
+            "extend": "array",
+            "restname": "contentTypeExclude"
+        },
+        "content-type-include": {
+            "extend": "array",
+            "restname": "contentTypeInclude"
+        },
+        "cpu-saver": {
+            "falsehood": "disabled",
+            "restname": "cpuSaver",
+            "truth": "enabled"
+        },
+        "cpu-saver-high": {
+            "restname": "cpuSaverHigh"
+        },
+        "cpu-saver-low": {
+            "restname": "cpuSaverLow"
+        },
+        "gzip-level": {
+            "restname": "gzipLevel"
+        },
+        "gzip-window-size": {
+            "restname": "gzipWindowSize"
+        },
+        "gzipMemory": {
+            "restname": "gzipMemoryLevel"
+        },
+        "keep-accept-encoding": {
+            "falsehood": "disabled",
+            "restname": "keepAcceptEncoding",
+            "truth": "enabled"
+        },
+        "minimumSize": {
+            "restname": "minSize"
+        },
+        "preferMethod": {
+            "restname": "methodPrefer"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "selective": {
+            "falsehood": "disabled",
+            "restname": "selective",
+            "truth": "enabled"
+        },
+        "uri-exclude": {
+            "extend": "array",
+            "restname": "uriExclude"
+        },
+        "uri-include": {
+            "extend": "array",
+            "restname": "uriInclude"
+        },
+        "vary-header": {
+            "falsehood": "disabled",
+            "restname": "varyHeader",
+            "truth": "enabled"
+        }
+    },
+    "ltm/profile/http-proxy-connect": {
+        "default-state": {
+            "falsehood": "disabled",
+            "restname": "defaultState",
+            "truth": "enabled"
+        }
+    },
+    "ltm/profile/http/enforcement": {
+        "excess-client-headers": {
+            "restname": "excessClientHeaders"
+        },
+        "excess-server-headers": {
+            "restname": "excessServerHeaders"
+        },
+        "known-methods": {
+            "extend": "array",
+            "restname": "knownMethods"
+        },
+        "max-header-count": {
+            "restname": "maxHeaderCount"
+        },
+        "max-header-size": {
+            "restname": "maxHeaderSize"
+        },
+        "max-requests": {
+            "restname": "maxRequests"
+        },
+        "oversize-client-headers": {
+            "falsehood": "disabled",
+            "restname": "oversizeClientHeaders",
+            "truth": "enabled"
+        },
+        "oversize-server-headers": {
+            "falsehood": "disabled",
+            "restname": "oversizeServerHeaders",
+            "truth": "enabled"
+        },
+        "pipelineAction": {
+            "restname": "pipeline"
+        },
+        "truncated-redirects": {
+            "falsehood": "disabled",
+            "restname": "truncatedRedirects",
+            "truth": "enabled"
+        },
+        "unknownMethodAction": {
+            "restname": "unknownMethod"
+        }
+    },
+    "ltm/profile/http/explicit-proxy": {
+        "bad-request-message": {
+            "quotedString": true,
+            "restname": "badRequestMessage"
+        },
+        "bad-response-message": {
+            "quotedString": true,
+            "restname": "badResponseMessage"
+        },
+        "connect-error-message": {
+            "quotedString": true,
+            "restname": "connectErrorMessage"
+        },
+        "defaultConnectAction": {
+            "restname": "defaultConnectHandling"
+        },
+        "dns-error-message": {
+            "quotedString": true,
+            "restname": "dnsErrorMessage"
+        },
+        "doNotProxyHosts": {
+            "extend": "array",
+            "restname": "hostNames"
+        },
+        "ipv6": {
+            "falsehood": "no",
+            "restname": "ipv6",
+            "truth": "yes"
+        },
+        "resolver": {
+            "restname": "dnsResolver"
+        },
+        "route-domain": {
+            "restname": "routeDomain"
+        },
+        "tunnel-name": {
+            "restname": "tunnelName"
+        }
+    },
+    "ltm/profile/http/hsts": {
+        "include-subdomains": {
+            "falsehood": "disabled",
+            "restname": "includeSubdomains",
+            "truth": "enabled"
+        },
+        "includeSubdomains": {
+            "falsehood": "disabled",
+            "restname": "includeSubdomains",
+            "truth": "enabled"
+        },
+        "insert": {
+            "falsehood": "disabled",
+            "restname": "mode",
+            "truth": "enabled"
+        },
+        "period": {
+            "restname": "maximumAge"
+        },
+        "preload": {
+            "falsehood": "disabled",
+            "restname": "preload",
+            "truth": "enabled"
+        }
+    },
+    "ltm/profile/http2": {
+        "activationMode": {
+            "extend": "array",
+            "restname": "activationModes"
+        },
+        "concurrent-streams-per-connection": {
+            "restname": "concurrentStreamsPerConnection"
+        },
+        "connection-idle-timeout": {
+            "restname": "connectionIdleTimeout"
+        },
+        "enforce-tls-requirements": {
+            "falsehood": "disabled",
+            "restname": "enforceTlsRequirements",
+            "truth": "enabled"
+        },
+        "frame-size": {
+            "restname": "frameSize"
+        },
+        "header-table-size": {
+            "restname": "headerTableSize"
+        },
+        "include-content-length": {
+            "falsehood": "disabled",
+            "restname": "includeContentLength",
+            "truth": "enabled"
+        },
+        "insert-header": {
+            "falsehood": "disabled",
+            "restname": "insertHeader",
+            "truth": "enabled"
+        },
+        "insert-header-name": {
+            "quotedString": true,
+            "restname": "insertHeaderName"
+        },
+        "receive-window": {
+            "restname": "receiveWindow"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "write-size": {
+            "restname": "writeSize"
+        }
+    },
+    "ltm/profile/icap": {
+        "fromHeader": {
+            "quotedString": true,
+            "restname": "headerFrom"
+        },
+        "hostHeader": {
+            "quotedString": true,
+            "restname": "host"
+        },
+        "preview-length": {
+            "restname": "previewLength"
+        },
+        "refererHeader": {
+            "quotedString": true,
+            "restname": "referer"
+        },
+        "uri": {
+            "quotedString": true,
+            "restname": "uri"
+        },
+        "userAgentHeader": {
+            "quotedString": true,
+            "restname": "userAgent"
+        }
+    },
+    "ltm/profile/ipother": {
+        "idle-timeout": {
+            "intToString": true,
+            "restname": "idleTimeout"
+        },
+        "parentProfile": {
+            "restname": "defaultsFrom"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        }
+    },
+    "ltm/profile/one-connect": {
+        "connectionLimitEnforcement": {
+            "restname": "limitType"
+        },
+        "idle-timeout-override": {
+            "restname": "idleTimeoutOverride"
+        },
+        "maxConnectionAge": {
+            "restname": "maxAge"
+        },
+        "maxConnectionReuse": {
+            "restname": "maxReuse"
+        },
+        "maxConnections": {
+            "restname": "maxSize"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "share-pools": {
+            "falsehood": "disabled",
+            "restname": "sharePools",
+            "truth": "enabled"
+        },
+        "source-mask": {
+            "restname": "sourceMask"
+        },
+        "sharePools": {
+            "falsehood": "disabled",
+            "restname": "sharePools",
+            "truth": "enabled"
+        }
+    },
+    "ltm/profile/radius": {
+        "parentProfile": {
+            "restname": "defaultsFrom"
+        },
+        "persistAttribute": {
+            "default": "none",
+            "intToString": true,
+            "restname": "persistAvp"
+        },
+        "protocolProfile": {
+            "requiredModules": {
+                "anyOf": [
+                    "afm",
+                    "pem"
+                ]
+            },
+            "restname": "pemProtocolProfileRadius"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "subscriberDiscoveryEnabled": {
+            "falsehood": "disabled",
+            "requiredModules": {
+                "anyOf": [
+                    "afm",
+                    "pem"
+                ]
+            },
+            "restname": "subscriberDiscovery",
+            "truth": "enabled"
+        }
+    },
+    "ltm/profile/request-adapt": {
+        "allowHTTP10": {
+            "falsehood": "no",
+            "restname": "allowHttp10",
+            "truth": "yes"
+        },
+        "enableHttpAdaptation": {
+            "falsehood": "no",
+            "restname": "enabled",
+            "truth": "yes"
+        },
+        "internalService": {
+            "restname": "internalVirtual"
+        },
+        "preview-size": {
+            "restname": "previewSize"
+        },
+        "service-down-action": {
+            "restname": "serviceDownAction"
+        },
+        "timeout": {
+            "restname": "timeout"
+        }
+    },
+    "ltm/profile/request-log": {
+        "byDefaultEnabled": {
+            "falsehood": "no",
+            "restname": "logResponseByDefault",
+            "truth": "yes"
+        },
+        "parentProfile": {
+            "restname": "defaultsFrom"
+        },
+        "proxy-response": {
+            "quotedString": true,
+            "restname": "proxyResponse"
+        },
+        "proxyCloseOnErrorEnabled": {
+            "falsehood": "no",
+            "restname": "proxyCloseOnError",
+            "truth": "yes"
+        },
+        "proxyRespondOnLoggingErrorEnabled": {
+            "falsehood": "no",
+            "restname": "proxyRespondOnLoggingError",
+            "truth": "yes"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "requestEnabled": {
+            "falsehood": "disabled",
+            "restname": "requestLogging",
+            "truth": "enabled"
+        },
+        "requestErrorLoggingEnabled": {
+            "falsehood": "no",
+            "restname": "logRequestLoggingErrors",
+            "truth": "yes"
+        },
+        "requestErrorPool": {
+            "restname": "requestLogErrorPool"
+        },
+        "requestErrorProtocol": {
+            "restname": "requestLogErrorProtocol"
+        },
+        "requestErrorTemplate": {
+            "quotedString": true,
+            "restname": "requestLogErrorTemplate"
+        },
+        "requestPool": {
+            "restname": "requestLogPool"
+        },
+        "requestProtocol": {
+            "restname": "requestLogProtocol"
+        },
+        "requestTemplate": {
+            "quotedString": true,
+            "restname": "requestLogTemplate"
+        },
+        "responseEnabled": {
+            "falsehood": "disabled",
+            "restname": "responseLogging",
+            "truth": "enabled"
+        },
+        "responseErrorLoggingEnabled": {
+            "falsehood": "disabled",
+            "restname": "logResponseLoggingErrors",
+            "truth": "enabled"
+        },
+        "responseErrorPool": {
+            "restname": "responseLogErrorPool"
+        },
+        "responseErrorProtocol": {
+            "restname": "responseLogErrorProtocol"
+        },
+        "responseErrorTemplate": {
+            "quotedString": true,
+            "restname": "responseLogErrorTemplate"
+        },
+        "responsePool": {
+            "restname": "responseLogPool"
+        },
+        "responseProtocol": {
+            "restname": "responseLogProtocol"
+        },
+        "responseTemplate": {
+            "quotedString": true,
+            "restname": "responseLogTemplate"
+        }
+    },
+    "ltm/profile/response-adapt": {
+        "allowHTTP10": {
+            "falsehood": "no",
+            "restname": "allowHttp10",
+            "truth": "yes"
+        },
+        "enableHttpAdaptation": {
+            "falsehood": "no",
+            "restname": "enabled",
+            "truth": "yes"
+        },
+        "internalService": {
+            "restname": "internalVirtual"
+        },
+        "preview-size": {
+            "restname": "previewSize"
+        },
+        "service-down-action": {
+            "restname": "serviceDownAction"
+        },
+        "timeout": {
+            "restname": "timeout"
+        }
+    },
+    "ltm/profile/rewrite": {
+        "bypass-list": {
+            "extend": "array",
+            "restname": "bypassList"
+        },
+        "certificate": {
+            "restname": "javaSigner"
+        },
+        "client-caching-type": {
+            "restname": "clientCachingType"
+        },
+        "defaults-from": {
+            "restname": "defaultsFrom"
+        },
+        "java-ca-file": {
+            "restname": "javaCaFile"
+        },
+        "java-crl": {
+            "default": "none",
+            "restname": "javaCrl"
+        },
+        "java-sign-key": {
+            "restname": "javaSignKey"
+        },
+        "java-sign-key-passphrase": {
+            "quotedString": true,
+            "restname": "javaSignKeyPassphrase"
+        },
+        "locationSpecificEnabled": {
+            "falsehood": "false",
+            "restname": "locationSpecific",
+            "truth": "true"
+        },
+        "requestSettings": {
+            "extend": "object",
+            "restname": "request"
+        },
+        "responseSettings": {
+            "extend": "object",
+            "restname": "response"
+        },
+        "rewrite-list": {
+            "extend": "array",
+            "restname": "rewriteList"
+        },
+        "rewrite-mode": {
+            "restname": "rewriteMode"
+        },
+        "set-cookie-rules": {
+            "extend": "objArray",
+            "restname": "setCookieRules"
+        },
+        "splitTunnelingEnabled": {
+            "falsehood": "false",
+            "restname": "splitTunneling",
+            "truth": "true"
+        },
+        "uri-rules": {
+            "extend": "objArray",
+            "restname": "uriRules"
+        }
+    },
+    "ltm/profile/rewrite/request": {
+        "insertXforwardedForEnabled": {
+            "falsehood": "disabled",
+            "restname": "insertXforwardedFor",
+            "truth": "enabled"
+        },
+        "insertXforwardedHostEnabled": {
+            "falsehood": "disabled",
+            "restname": "insertXforwardedHost",
+            "truth": "enabled"
+        },
+        "insertXforwardedProtoEnabled": {
+            "falsehood": "disabled",
+            "restname": "insertXforwardedProto",
+            "truth": "enabled"
+        },
+        "rewriteHeadersEnabled": {
+            "falsehood": "disabled",
+            "restname": "rewriteHeaders",
+            "truth": "enabled"
+        }
+    },
+    "ltm/profile/rewrite/response": {
+        "rewriteContentEnabled": {
+            "falsehood": "disabled",
+            "restname": "rewriteContent",
+            "truth": "enabled"
+        },
+        "rewriteHeadersEnabled": {
+            "falsehood": "disabled",
+            "restname": "rewriteHeaders",
+            "truth": "enabled"
+        }
+    },
+    "ltm/profile/rewrite/set-cookie-rules": {
+        "client": {
+            "extend": "object",
+            "restname": "client"
+        },
+        "name": {
+            "restname": "name"
+        },
+        "server": {
+            "extend": "object",
+            "restname": "server"
+        }
+    },
+    "ltm/profile/rewrite/set-cookie-rules/client": {
+        "domain": {
+            "restname": "domain"
+        },
+        "path": {
+            "restname": "path"
+        }
+    },
+    "ltm/profile/rewrite/set-cookie-rules/server": {
+        "domain": {
+            "restname": "domain"
+        },
+        "path": {
+            "restname": "path"
+        }
+    },
+    "ltm/profile/rewrite/uri-rules": {
+        "client": {
+            "extend": "object",
+            "restname": "client"
+        },
+        "name": {
+            "restname": "name"
+        },
+        "server": {
+            "extend": "object",
+            "restname": "server"
+        },
+        "type": {
+            "restname": "type"
+        }
+    },
+    "ltm/profile/rewrite/uri-rules/client": {
+        "host": {
+            "default": "none",
+            "restname": "host"
+        },
+        "path": {
+            "restname": "path"
+        },
+        "port": {
+            "default": "none",
+            "restname": "port"
+        },
+        "scheme": {
+            "default": "none",
+            "restname": "scheme"
+        }
+    },
+    "ltm/profile/rewrite/uri-rules/server": {
+        "host": {
+            "default": "none",
+            "restname": "host"
+        },
+        "path": {
+            "restname": "path"
+        },
+        "port": {
+            "default": "none",
+            "restname": "port"
+        },
+        "scheme": {
+            "default": "none",
+            "restname": "scheme"
+        }
+    },
+    "ltm/profile/server-ldap": {
+        "activation-mode": {
+            "restname": "activationMode"
+        }
+    },
+    "ltm/profile/server-ssl": {
+        "alert-timeout": {
+            "intToString": true,
+            "restname": "alertTimeout"
+        },
+        "allowExpiredCRL": {
+            "falsehood": "disabled",
+            "restname": "allowExpiredCrl",
+            "truth": "enabled"
+        },
+        "authenticationFrequency": {
+            "restname": "authenticate"
+        },
+        "c3dCACertificate": {
+            "restname": "c3dCaCert"
+        },
+        "c3dCAKey": {
+            "restname": "c3dCaKey"
+        },
+        "c3dCAPassphrase": {
+            "quotedString": true,
+            "restname": "c3dCaPassphrase"
+        },
+        "c3dCertificateExtensions": {
+            "extend": "array",
+            "restname": "c3dCertExtensionIncludes"
+        },
+        "c3dCertificateLifespan": {
+            "restname": "c3dCertLifespan"
+        },
+        "c3dEnabled": {
+            "falsehood": "disabled",
+            "restname": "sslC3d",
+            "truth": "enabled"
+        },
+        "cache-timeout": {
+            "restname": "cacheTimeout"
+        },
+        "chain": {
+            "restname": "chain"
+        },
+        "cipher-group": {
+            "restname": "cipherGroup"
+        },
+        "ciphers": {
+            "restname": "ciphers"
+        },
+        "clientCertificate": {
+            "default": "none",
+            "restname": "cert"
+        },
+        "crlFile": {
+            "restname": "crlFile"
+        },
+        "forwardProxyBypassEnabled": {
+            "falsehood": "disabled",
+            "restname": "sslForwardProxyBypass",
+            "truth": "enabled"
+        },
+        "forwardProxyEnabled": {
+            "falsehood": "disabled",
+            "restname": "sslForwardProxy",
+            "truth": "enabled"
+        },
+        "ignoreExpired": {
+            "falsehood": "drop",
+            "restname": "expireCertResponseControl",
+            "truth": "ignore"
+        },
+        "ignoreUntrusted": {
+            "falsehood": "drop",
+            "restname": "untrustedCertResponseControl",
+            "truth": "ignore"
+        },
+        "key": {
+            "default": "none",
+            "restname": "key"
+        },
+        "options": {
+            "extend": "array",
+            "restname": "options"
+        },
+        "passphrase": {
+            "quotedString": true,
+            "restname": "passphrase"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "renegotiationEnabled": {
+            "falsehood": "disabled",
+            "restname": "renegotiation",
+            "truth": "enabled"
+        },
+        "retainCertificateEnabled": {
+            "falsehood": "false",
+            "restname": "retainCertificate",
+            "truth": "true"
+        },
+        "sendSNI": {
+            "restname": "serverName"
+        },
+        "serverName": {
+            "restname": "authenticateName"
+        },
+        "sessionTickets": {
+            "falsehood": "disabled",
+            "restname": "sessionTicket",
+            "truth": "enabled"
+        },
+        "trustCA": {
+            "restname": "caFile"
+        },
+        "validateCertificate": {
+            "falsehood": "ignore",
+            "restname": "peerCertMode",
+            "truth": "require"
+        }
+    },
+    "ltm/profile/stream": {
+        "chunk-size": {
+            "restname": "chunkSize"
+        },
+        "chunkingEnabled": {
+            "falsehood": "disabled",
+            "restname": "chunking",
+            "truth": "enabled"
+        },
+        "parentProfile": {
+            "restname": "defaultsFrom"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "source": {
+            "quotedString": true,
+            "restname": "source"
+        },
+        "target": {
+            "quotedString": true,
+            "restname": "target"
+        }
+    },
+    "ltm/profile/tcp": {
+        "abc": {
+            "falsehood": "disabled",
+            "restname": "abc",
+            "truth": "enabled"
+        },
+        "ack-on-push": {
+            "falsehood": "disabled",
+            "restname": "ackOnPush",
+            "truth": "enabled"
+        },
+        "ackOnPush": {
+            "falsehood": "disabled",
+            "restname": "ackOnPush",
+            "truth": "enabled"
+        },
+        "auto-proxy-buffer-size": {
+            "falsehood": "disabled",
+            "restname": "autoProxyBufferSize",
+            "truth": "enabled"
+        },
+        "autoProxyBufferSize": {
+            "falsehood": "disabled",
+            "restname": "autoProxyBufferSize",
+            "truth": "enabled"
+        },
+        "auto-receive-window-size": {
+            "falsehood": "disabled",
+            "restname": "autoReceiveWindowSize",
+            "truth": "enabled"
+        },
+        "autoReceiveWindowSize": {
+            "falsehood": "disabled",
+            "restname": "autoReceiveWindowSize",
+            "truth": "enabled"
+        },
+        "auto-send-buffer-size": {
+            "falsehood": "disabled",
+            "restname": "autoSendBufferSize",
+            "truth": "enabled"
+        },
+        "autoSendBufferSize": {
+            "falsehood": "disabled",
+            "restname": "autoSendBufferSize",
+            "truth": "enabled"
+        },
+        "close-wait-timeout": {
+            "restname": "closeWaitTimeout"
+        },
+        "congestion-control": {
+            "restname": "congestionControl"
+        },
+        "congestionMetricsCache": {
+            "falsehood": "disabled",
+            "restname": "cmetricsCache",
+            "truth": "enabled"
+        },
+        "congestionMetricsCacheTimeout": {
+            "restname": "cmetricsCacheTimeout"
+        },
+        "deferred-accept": {
+            "falsehood": "disabled",
+            "restname": "deferredAccept",
+            "truth": "enabled"
+        },
+        "deferredAccept": {
+            "falsehood": "disabled",
+            "restname": "deferredAccept",
+            "truth": "enabled"
+        },
+        "delay-window-control": {
+            "falsehood": "disabled",
+            "restname": "delayWindowControl",
+            "truth": "enabled"
+        },
+        "delayed-acks": {
+            "falsehood": "disabled",
+            "restname": "delayedAcks",
+            "truth": "enabled"
+        },
+        "delayWindowControl": {
+            "falsehood": "disabled",
+            "restname": "delayWindowControl",
+            "truth": "enabled"
+        },
+        "delayedAcks": {
+            "falsehood": "disabled",
+            "restname": "delayedAcks",
+            "truth": "enabled"
+        },
+        "dsack": {
+            "falsehood": "disabled",
+            "restname": "dsack",
+            "truth": "enabled"
+        },
+        "early-retransmit": {
+            "falsehood": "disabled",
+            "restname": "earlyRetransmit",
+            "truth": "enabled"
+        },
+        "earlyRetransmit": {
+            "falsehood": "disabled",
+            "restname": "earlyRetransmit",
+            "truth": "enabled"
+        },
+        "ecn": {
+            "falsehood": "disabled",
+            "restname": "ecn",
+            "truth": "enabled"
+        },
+        "enhanced-loss-recovery": {
+            "falsehood": "disabled",
+            "restname": "enhancedLossRecovery",
+            "truth": "enabled"
+        },
+        "fast-open": {
+            "falsehood": "disabled",
+            "restname": "fastOpen",
+            "truth": "enabled"
+        },
+        "enhancedLossRecovery": {
+            "falsehood": "disabled",
+            "restname": "enhancedLossRecovery",
+            "truth": "enabled"
+        },
+        "fastOpen": {
+            "falsehood": "disabled",
+            "restname": "fastOpen",
+            "truth": "enabled"
+        },
+        "fast-open-cookie-expiration": {
+            "restname": "fastOpenCookieExpiration"
+        },
+        "fin-wait-timeout": {
+            "restname": "finWaitTimeout"
+        },
+        "finWait2Timeout": {
+            "restname": "finWait2Timeout"
+        },
+        "idle-timeout": {
+            "intToString": true,
+            "restname": "idleTimeout"
+        },
+        "init-cwnd": {
+            "restname": "initCwnd"
+        },
+        "init-rwnd": {
+            "restname": "initRwnd"
+        },
+        "ip-df-mode": {
+            "restname": "ipDfMode"
+        },
+        "ip-tos-to-client": {
+            "intToString": true,
+            "restname": "ipTosToClient"
+        },
+        "keep-alive-interval": {
+            "restname": "keepAliveInterval"
+        },
+        "limited-transmit": {
+            "falsehood": "disabled",
+            "restname": "limitedTransmit",
+            "truth": "enabled"
+        },
+        "limitedTransmit": {
+            "falsehood": "disabled",
+            "restname": "limitedTransmit",
+            "truth": "enabled"
+        },
+        "link-qos-to-client": {
+            "intToString": true,
+            "restname": "linkQosToClient"
+        },
+        "max-retrans": {
+            "restname": "maxRetrans"
+        },
+        "max-segment-size": {
+            "restname": "maxSegmentSize"
+        },
+        "md5-signature": {
+            "falsehood": "disabled",
+            "restname": "md5Signature",
+            "truth": "enabled"
+        },
+        "md5Signature": {
+            "falsehood": "disabled",
+            "restname": "md5Signature",
+            "truth": "enabled"
+        },
+        "md5-signature-passphrase": {
+            "quotedString": true,
+            "restname": "md5SignaturePassphrase"
+        },
+        "minimum-rto": {
+            "restname": "minimumRto"
+        },
+        "mptcp": {
+            "restname": "mptcp"
+        },
+        "mptcp-csum": {
+            "falsehood": "disabled",
+            "restname": "mptcpCsum",
+            "truth": "enabled"
+        },
+        "mptcp-csum-verify": {
+            "falsehood": "disabled",
+            "restname": "mptcpCsumVerify",
+            "truth": "enabled"
+        },"mptcpCsum": {
+            "falsehood": "disabled",
+            "restname": "mptcpCsum",
+            "truth": "enabled"
+        },
+        "mptcpCsumVerify": {
+            "falsehood": "disabled",
+            "restname": "mptcpCsumVerify",
+            "truth": "enabled"
+        },
+        "mptcp-fallback": {
+            "restname": "mptcpFallback"
+        },
+        "mptcp-idle-timeout": {
+            "restname": "mptcpIdleTimeout"
+        },
+        "mptcp-join-max": {
+            "restname": "mptcpJoinMax"
+        },
+        "mptcp-timeout": {
+            "restname": "mptcpTimeout"
+        },
+        "mptcpFastJoin": {
+            "falsehood": "disabled",
+            "restname": "mptcpFastjoin",
+            "truth": "enabled"
+        },
+        "mptcpMakeAfterBreak": {
+            "falsehood": "disabled",
+            "restname": "mptcpMakeafterbreak",
+            "truth": "enabled"
+        },
+        "mptcpNoJoinDssAck": {
+            "falsehood": "disabled",
+            "restname": "mptcpNojoindssack",
+            "truth": "enabled"
+        },
+        "mptcpRetransmitMin": {
+            "restname": "mptcpRxmitmin"
+        },
+        "mptcpRtoMax": {
+            "restname": "mptcpRtomax"
+        },
+        "mptcpSubflowMax": {
+            "restname": "mptcpSubflowmax"
+        },
+        "nagle": {
+            "restname": "nagle"
+        },
+        "pkt-loss-ignore-burst": {
+            "restname": "pktLossIgnoreBurst"
+        },
+        "pkt-loss-ignore-rate": {
+            "restname": "pktLossIgnoreRate"
+        },
+        "proxy-buffer-high": {
+            "restname": "proxyBufferHigh"
+        },
+        "proxy-buffer-low": {
+            "restname": "proxyBufferLow"
+        },
+        "proxy-options": {
+            "falsehood": "disabled",
+            "restname": "proxyOptions",
+            "truth": "enabled"
+        },
+        "proxyOptions": {
+            "falsehood": "disabled",
+            "restname": "proxyOptions",
+            "truth": "enabled"
+        },
+        "proxyMSS": {
+            "falsehood": "disabled",
+            "restname": "proxyMss",
+            "truth": "enabled"
+        },
+        "push-flag": {
+            "restname": "pushFlag"
+        },
+        "rate-pace": {
+            "falsehood": "disabled",
+            "restname": "ratePace",
+            "truth": "enabled"
+        },
+        "ratePace": {
+            "falsehood": "disabled",
+            "restname": "ratePace",
+            "truth": "enabled"
+        },
+        "rate-pace-max-rate": {
+            "restname": "ratePaceMaxRate"
+        },
+        "receive-window-size": {
+            "restname": "receiveWindowSize"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "reset-on-timeout": {
+            "falsehood": "disabled",
+            "restname": "resetOnTimeout",
+            "truth": "enabled"
+        },
+        "resetOnTimeout": {
+            "falsehood": "disabled",
+            "restname": "resetOnTimeout",
+            "truth": "enabled"
+        },
+        "retransmitThreshold": {
+            "restname": "rexmtThresh"
+        },
+        "selective-acks": {
+            "falsehood": "disabled",
+            "restname": "selectiveAcks",
+            "truth": "enabled"
+        },
+        "selective-nack": {
+            "falsehood": "disabled",
+            "restname": "selectiveNack",
+            "truth": "enabled"
+        },
+        "selectiveAcks": {
+            "falsehood": "disabled",
+            "restname": "selectiveAcks",
+            "truth": "enabled"
+        },
+        "selectiveNack": {
+            "falsehood": "disabled",
+            "restname": "selectiveNack",
+            "truth": "enabled"
+        },
+        "send-buffer-size": {
+            "restname": "sendBufferSize"
+        },
+        "slow-start": {
+            "falsehood": "disabled",
+            "restname": "slowStart",
+            "truth": "enabled"
+        },
+        "syn-cookie-enable": {
+            "falsehood": "disabled",
+            "restname": "synCookieEnable",
+            "truth": "enabled"
+        },
+        "slowStart": {
+            "falsehood": "disabled",
+            "restname": "slowStart",
+            "truth": "enabled"
+        },
+        "synCookieEnable": {
+            "falsehood": "disabled",
+            "restname": "synCookieEnable",
+            "truth": "enabled"
+        },
+        "syn-max-retrans": {
+            "restname": "synMaxRetrans"
+        },
+        "syn-rto-base": {
+            "restname": "synRtoBase"
+        },
+        "synCookieAllowlist": {
+            "falsehood": "disabled",
+            "restname": "synCookieWhitelist",
+            "truth": "enabled"
+        },
+        "tail-loss-probe": {
+            "falsehood": "disabled",
+            "restname": "tailLossProbe",
+            "truth": "enabled"
+        },
+        "tailLossProbe": {
+            "falsehood": "disabled",
+            "restname": "tailLossProbe",
+            "truth": "enabled"
+        },
+        "tcp-options": {
+            "restname": "tcpOptions"
+        },
+        "time-wait-recycle": {
+            "falsehood": "disabled",
+            "restname": "timeWaitRecycle",
+            "truth": "enabled"
+        },
+        "timeWaitRecycle": {
+            "falsehood": "disabled",
+            "restname": "timeWaitRecycle",
+            "truth": "enabled"
+        },
+        "time-wait-timeout": {
+            "intToString": true,
+            "restname": "timeWaitTimeout"
+        },
+        "timestamps": {
+            "falsehood": "disabled",
+            "restname": "timestamps",
+            "truth": "enabled"
+        },
+        "ttlIPv4": {
+            "restname": "ipTtlV4"
+        },
+        "ttlIPv6": {
+            "restname": "ipTtlV6"
+        },
+        "ttlMode": {
+            "restname": "ipTtlMode"
+        },
+        "verified-accept": {
+            "falsehood": "disabled",
+            "restname": "verifiedAccept",
+            "truth": "enabled"
+        },
+        "verifiedAccept": {
+            "falsehood": "disabled",
+            "restname": "verifiedAccept",
+            "truth": "enabled"
+        },
+        "zero-window-timeout": {
+            "restname": "zeroWindowTimeout"
+        }
+    },
+    "ltm/profile/tcp-analytics": {
+        "collect-city": {
+            "falsehood": "disabled",
+            "restname": "collectCity",
+            "truth": "enabled"
+        },
+        "collect-continent": {
+            "falsehood": "disabled",
+            "restname": "collectContinent",
+            "truth": "enabled"
+        },
+        "collect-country": {
+            "falsehood": "disabled",
+            "restname": "collectCountry",
+            "truth": "enabled"
+        },
+        "collect-nexthop": {
+            "falsehood": "disabled",
+            "restname": "collectNexthop",
+            "truth": "enabled"
+        },
+        "collect-post-code": {
+            "falsehood": "disabled",
+            "restname": "collectPostCode",
+            "truth": "enabled"
+        },
+        "collect-region": {
+            "falsehood": "disabled",
+            "restname": "collectRegion",
+            "truth": "enabled"
+        },
+        "collect-remote-host-ip": {
+            "falsehood": "disabled",
+            "restname": "collectRemoteHostIp",
+            "truth": "enabled"
+        },
+        "collect-remote-host-subnet": {
+            "falsehood": "disabled",
+            "restname": "collectRemoteHostSubnet",
+            "truth": "enabled"
+        },
+        "collected-by-client-side": {
+            "falsehood": "disabled",
+            "restname": "collectedByClientSide",
+            "truth": "enabled"
+        },
+        "collected-by-server-side": {
+            "falsehood": "disabled",
+            "restname": "collectedByServerSide",
+            "truth": "enabled"
+        },
+        "collected-stats-external-logging": {
+            "falsehood": "disabled",
+            "restname": "collectedStatsExternalLogging",
+            "truth": "enabled"
+        },
+        "collected-stats-internal-logging": {
+            "falsehood": "disabled",
+            "restname": "collectedStatsInternalLogging",
+            "truth": "enabled"
+        },
+        "external-logging-publisher": {
+            "default": "none",
+            "restname": "externalLoggingPublisher"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        }
+    },
+    "ltm/profile/tcp/tcp-options": {
+        "option": {
+            "restname": "option"
+        },
+        "when": {
+            "restname": "when"
+        }
+    },
+    "ltm/profile/udp": {
+        "allow-no-payload": {
+            "falsehood": "disabled",
+            "restname": "allowNoPayload",
+            "truth": "enabled"
+        },
+        "allowNoPayload": {
+            "falsehood": "disabled",
+            "restname": "allowNoPayload",
+            "truth": "enabled"
+        },
+        "buffer-max-bytes": {
+            "restname": "bufferMaxBytes"
+        },
+        "buffer-max-packets": {
+            "restname": "bufferMaxPackets"
+        },
+        "datagram-load-balancing": {
+            "falsehood": "disabled",
+            "restname": "datagramLoadBalancing",
+            "truth": "enabled"
+        },
+        "datagramLoadBalancing": {
+            "falsehood": "disabled",
+            "restname": "datagramLoadBalancing",
+            "truth": "enabled"
+        },
+        "idle-timeout": {
+            "intToString": true,
+            "restname": "idleTimeout"
+        },
+        "ip-df-mode": {
+            "restname": "ipDfMode"
+        },
+        "ip-tos-to-client": {
+            "intToString": true,
+            "restname": "ipTosToClient"
+        },
+        "link-qos-to-client": {
+            "intToString": true,
+            "restname": "linkQosToClient"
+        },
+        "proxyMSS": {
+            "falsehood": "disabled",
+            "restname": "proxyMss",
+            "truth": "enabled"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "ttlIPv4": {
+            "restname": "ipTtlV4"
+        },
+        "ttlIPv6": {
+            "restname": "ipTtlV6"
+        },
+        "ttlMode": {
+            "restname": "ipTtlMode"
+        },
+        "useChecksum": {
+            "falsehood": "enabled",
+            "restname": "noChecksum",
+            "truth": "disabled"
+        }
+    },
+    "ltm/profile/web-acceleration": {
+        "agingRate": {
+            "restname": "cacheAgingRate"
+        },
+        "cache-size": {
+            "restname": "cacheSize"
+        },
+        "ignoreHeaders": {
+            "restname": "cacheClientCacheControlMode"
+        },
+        "insertAgeHeaderEnabled": {
+            "falsehood": "disabled",
+            "restname": "cacheInsertAgeHeader",
+            "truth": "enabled"
+        },
+        "maximumAge": {
+            "restname": "cacheMaxAge"
+        },
+        "maximumEntries": {
+            "restname": "cacheMaxEntries"
+        },
+        "maximumObjectSize": {
+            "restname": "cacheObjectMaxSize"
+        },
+        "metadataMaxSize": {
+            "restname": "metadataCacheMaxSize"
+        },
+        "minimumObjectSize": {
+            "restname": "cacheObjectMinSize"
+        },
+        "parentProfile": {
+            "restname": "defaultsFrom"
+        },
+        "uriExcludeList": {
+            "extend": "array",
+            "restname": "cacheUriExclude"
+        },
+        "uriIncludeList": {
+            "extend": "array",
+            "restname": "cacheUriInclude"
+        },
+        "uriIncludeOverrideList": {
+            "extend": "array",
+            "restname": "cacheUriIncludeOverride"
+        },
+        "uriPinnedList": {
+            "extend": "array",
+            "restname": "cacheUriPinned"
+        }
+    },
+    "ltm/profile/websocket": {
+        "masking": {
+            "restname": "masking"
+        }
+    },
+    "ltm/rule": {
+        "iRule": {
+            "restname": "apiAnonymous"
+        }
+    },
+    "ltm/snatpool": {
+        "members": {
+            "restname": "members"
+        },
+        "snatAddresses": {
+            "restname": "members"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        }
+    },
+    "ltm/virtual": {
+        "address-status": {
+            "falsehood": "no",
+            "restname": "addressStatus",
+            "truth": "yes"
+        },
+        "auto-lasthop": {
+            "restname": "autoLasthop"
+        },
+        "clone-pools": {
+            "extend": "objArray",
+            "restname": "clonePools"
+        },
+        "destination": {
+            "restname": "destination"
+        },
+        "fallbackPersistenceMethod": {
+            "restname": "fallbackPersistence"
+        },
+        "iRules": {
+            "extend": "array",
+            "restname": "rules"
+        },
+        "internal": {
+            "restname": "internal"
+        },
+        "ip-forward": {
+            "restname": "ipForward"
+        },
+        "ip-intelligence-policy": {
+            "restname": "ipIntelligencePolicy"
+        },
+        "l2-forward": {
+            "restname": "l2Forward"
+        },
+        "last-hop-pool": {
+            "restname": "lastHopPool"
+        },
+        "layer4": {
+            "restname": "ipProtocol"
+        },
+        "mask": {
+            "restname": "mask"
+        },
+        "maxConnections": {
+            "restname": "connectionLimit"
+        },
+        "maximumBandwidth": {
+            "intToString": true,
+            "restname": "throughputCapacity"
+        },
+        "metadata": {
+            "extend": "objArray",
+            "restname": "metadata"
+        },
+        "mirroring": {
+            "falsehood": "disabled",
+            "restname": "mirror",
+            "truth": "enabled"
+        },
+        "nat64Enabled": {
+            "falsehood": "disabled",
+            "restname": "nat64",
+            "truth": "enabled"
+        },
+        "persistenceMethods": {
+            "extend": "objArray",
+            "restname": "persist"
+        },
+        "policies": {
+            "extend": "objArray",
+            "restname": "policies"
+        },
+        "policyBandwidthControl": {
+            "restname": "bwcPolicy"
+        },
+        "policyFirewallEnforced": {
+            "restname": "fwEnforcedPolicy"
+        },
+        "policyFirewallStaged": {
+            "restname": "fwStagedPolicy"
+        },
+        "policyPerRequestAccess": {
+            "restname": "perFlowRequestAccessPolicy"
+        },
+        "pool": {
+            "restname": "pool"
+        },
+        "profiles": {
+            "extend": "objArray",
+            "restname": "profiles"
+        },
+        "rate-limit": {
+            "restname": "rateLimit"
+        },
+        "remark": {
+            "quotedString": true,
+            "restname": "description"
+        },
+        "security-log-profiles": {
+            "extend": "array",
+            "restname": "securityLogProfiles"
+        },
+        "security-nat-policy": {
+            "extend": "object",
+            "restname": "securityNatPolicy"
+        },
+        "service-down-immediate-action": {
+            "restname": "serviceDownImmediateAction"
+        },
+        "service-policy": {
+            "restname": "servicePolicy"
+        },
+        "snat": {
+            "extend": "object",
+            "restname": "sourceAddressTranslation"
+        },
+        "source": {
+            "restname": "source"
+        },
+        "translateClientPort": {
+            "falsehood": "preserve",
+            "restname": "sourcePort",
+            "truth": "change"
+        },
+        "translateServerAddress": {
+            "falsehood": "disabled",
+            "restname": "translateAddress",
+            "truth": "enabled"
+        },
+        "translateServerPort": {
+            "falsehood": "disabled",
+            "restname": "translatePort",
+            "truth": "enabled"
+        },
+        "vlans": {
+            "extend": "array",
+            "restname": "vlans"
+        },
+        "vlans-disabled": {
+            "restname": "vlansDisabled"
+        },
+        "vlans-enabled": {
+            "restname": "vlansEnabled"
+        },
+        "addressStatus": {
+            "falsehood": "no",
+            "restname": "addressStatus",
+            "truth": "yes"
+        }
+    },
+    "ltm/virtual-address": {
+        "arpEnabled": {
+            "falsehood": "disabled",
+            "restname": "arp",
+            "truth": "enabled"
+        },
+        "icmp-echo": {
+            "restname": "icmpEcho"
+        },
+        "netmask": {
+            "restname": "mask"
+        },
+        "route-advertisement": {
+            "restname": "routeAdvertisement"
+        },
+        "spanningEnabled": {
+            "falsehood": "disabled",
+            "restname": "spanning",
+            "truth": "enabled"
+        },
+        "traffic-group": {
+            "restname": "trafficGroup"
+        },
+        "virtualAddress": {
+            "restname": "address"
+        }
+    },
+    "ltm/virtual/clone-pools": {
+        "context": {
+            "restname": "context"
+        },
+        "name": {
+            "restname": "name"
+        }
+    },
+    "ltm/virtual/metadata": {
+        "persist": {
+            "falsehood": "false",
+            "restname": "persist",
+            "truth": "true"
+        },
+        "value": {
+            "quotedString": true,
+            "restname": "value"
+        }
+    },
+    "ltm/virtual/persist": {
+        "name": {
+            "restname": "name"
+        },
+        "tmDefault": {
+            "restname": "default"
+        }
+    },
+    "ltm/virtual/policies": {
+        "fullPath": {
+            "restname": "name"
+        }
+    },
+    "ltm/virtual/profiles": {
+        "context": {
+            "restname": "context"
+        },
+        "fullPath": {
+            "restname": "name"
+        }
+    },
+    "ltm/virtual/security-nat-policy": {
+        "policy": {
+            "restname": "policy"
+        }
+    },
+    "ltm/virtual/source-address-translation": {
+        "pool": {
+            "restname": "pool"
+        },
+        "type": {
+            "restname": "type"
+        }
+    }
+}
